@@ -23,10 +23,11 @@ var 데이터 = [
         kakao.maps.event.addListener(marker, 'click', function(){
         var position = this.getPosition();
         let i =0;
+        const storeDetail = document.querySelector(".storeDetail");
         while (1){
             var newMarkerPosition  = new kakao.maps.LatLng(데이터[i].lat,데이터[i].lng); 
             if(position.equals(newMarkerPosition)){
-                // sideBar.innerHTML ="<iframe class=\"sample\" style=\"width:100%; height: 98%;\"src=\"/html/sidbar.html\"></iframe>";
+                storeDetail.innerHTML ="<iframe class=\"sample\" style=\"width:100%; height: 98%;\"src=\"/pages/ex.html\"></iframe>";
                 
                 var iwContent = 데이터[i].place;
                 var customOverlay = new kakao.maps.CustomOverlay({
