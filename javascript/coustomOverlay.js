@@ -21,12 +21,15 @@ var 데이터 = [
 
         //클릭한 마커의 좌표값을 불러옵니다
         kakao.maps.event.addListener(marker, 'click', function(){
-        var position = this.getPosition();
-        let i =0;
+        const position = this.getPosition();
+        console.log(position);
+        let i = 0;
         const storeDetail = document.querySelector(".storeDetail");
         while (1){
-            var newMarkerPosition  = new kakao.maps.LatLng(데이터[i].lat,데이터[i].lng); 
+            var newMarkerPosition  = new kakao.maps.LatLng(데이터[i].lat,데이터[i].lng);
+            console.log(newMarkerPosition);
             if(position.equals(newMarkerPosition)){
+                console.log(newMarkerPosition);
                 storeDetail.innerHTML ="<iframe class=\"sample\" style=\"width:100%; height: 98%;\"src=\"/pages/ex.html\"></iframe>";
                 
                 var iwContent = 데이터[i].place;
@@ -38,9 +41,14 @@ var 데이터 = [
             //지도, 마커 클릭 시 커스텀오버레이가 사라집니다
             kakao.maps.event.addListener(map, 'click', function(){
             customOverlay.setMap(null);
-        });
+            storeDetail.innerHTML ="<iframe class=\"sample\" style=\"width:100%; height: 98%;\"src=\"/pages/sidbar.html\"></iframe>";
+            });
             break}
-            else i++    
+            else {
+                console.log("turn");
+                i++;
+                storeDetail.innerHTML ="<iframe class=\"sample\" style=\"width:100%; height: 98%;\"src=\"/pages/sidbar.html\"></iframe>";    
+            }
         }
     });
 }
