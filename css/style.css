@@ -2,9 +2,11 @@
     --border-thick: 3px;
     --border-type: solid;
 }
-
-body{
-    margin-right: 10px;
+html,body{ 
+    margin:0; 
+    padding:0; 
+    width:100%;
+    height:100% 
 }
 
 header{
@@ -31,7 +33,6 @@ nav{
 }
 
 .container .storeDetail{
-    border: var(--border-type) var(--border-thick) peru;
     width: 30%;
 }
 
@@ -46,9 +47,6 @@ nav{
     display: none;
 }
 
-.storeDetail{
-    background: burlywood;
-}
 
 .black{
     background: black;
@@ -59,11 +57,15 @@ nav{
 
 footer{
     border: var(--border-type) var(--border-thick) brown;
+    width: 100%;
     height: 200px;
     background: black;
+    position:absolute;
+    bottom: 0;
 }
 
 .sns{
+    padding-left: 0;
     width: 100%;
     font-size: 40px;
     display: flex;
@@ -102,15 +104,14 @@ footer{
     }
     .container .map{
         width: 100%;
-        height: 50%;
+        height: 30%;
     }
     .container .storeDetail{
         width: 100%;
-        height: 100%;
+        height: 70%;
     }
     footer{
+        height: 20%;
         display: block;
-        width: 100%;
-        height: 30%;
     }
 }
