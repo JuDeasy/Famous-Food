@@ -1,0 +1,288 @@
+:root{
+    --border-thick: 3px;
+    --border-type: solid;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+    font-family: 'Noto Sans KR', sans-serif;
+    
+    list-style: none;
+    
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.text1{
+    margin: auto 10px auto auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+.text2{
+    margin: auto auto auto 0px;
+    font-size: 10px; 
+}
+
+.text3{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h4{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    font-style: italic;
+    color: rgba(223, 51, 20, 0.829);
+    text-shadow: rgba(177, 172, 172, 0.507) 3px 3px;
+}
+
+body{
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    border: var(--border-thick) var(--border-type) black;
+}
+
+nav{
+    width: 100%;
+    border: var(--border-thick) var(--border-type) green;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: var(--border-thick) var(--border-type) yellow;
+}
+
+.container .map{
+    border: var(--border-type) var(--border-thick) royalblue;
+    width: 70%;
+}
+
+.container .storeDetail{
+    border: var(--border-type) var(--border-thick) peru;
+    width: 30%;
+    overflow:auto
+}
+
+.storeDetail .main_pic{
+    width: 100%;
+    height:200px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 0px;
+}
+
+.box1{
+    width: 100%;
+    height: 200px;
+}
+
+.box2{
+    width: 100%;
+    height: 100px;
+}
+
+.box3{
+    width: 100%;
+    height: 250px;
+    border: 10px solid white;
+}
+
+.name{
+    background: white ;
+    width: 70%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: relative; /*현재 위치 기준*/
+    top: -50px; /*relative 현재 위치 기준으로 위로 -66px 현재 자리는 그대로 유지함*/
+    margin: auto; /*여백 자동 배열, 가운데 정렬*/
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);  
+}
+
+.score{
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    top: 70%;
+    text-align: center;
+    align-items: center;
+}
+.score i{
+    font-size: 20px;
+    color: rgb(250, 54, 54);
+    margin: auto;
+    align-items: center;
+}
+
+.heart{
+    font-size: 20px;
+    align-items: flex-end;
+    margin-right: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 24px;
+    height: 34px;
+    border-radius: 500px;
+    border-style: none;
+    background-color: white;
+}
+
+/* .far fa-heart{
+    color: red;
+}
+
+.fas fa-heart{
+    color: red
+} */
+.heart i{
+    color:red
+    /* color: rgba(128, 128, 128, 0.288);*/
+}
+
+
+.submenu{
+    width: 100%;
+    height: 40px;
+    margin: auto;   
+    margin-top: -40px;
+    display: flex;
+    justify-content: space-around;  
+    background: white;  
+    
+}
+
+.submenu li{
+    cursor: pointer;
+}
+
+.detail{
+    width: 90%;
+    margin: 0 36px;
+    display: flex;
+    flex-direction: column; 
+    width:600px; height:380px
+}
+
+.detail i{
+    margin: 5px;
+    font-size: 25px;
+    color: rgba(128, 128, 128, 0.582);
+}
+
+.menu_pic{
+    width: 90%;
+    height: 620px;
+    margin:auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.menu_pic .box3 span{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+} 
+
+.post{
+    width: 90%;
+    height: 100px;
+    margin: 0px 36px;
+    display: flex;
+    width:580px; height:80px;
+}
+.review_pic{
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    margin-right: 0;
+    
+}
+.review_text{
+    width: 424px;
+    text-overflow:ellipsis;
+    flex: 7;
+    text-align: left;
+    margin: auto;
+    font-size: 1rem;
+}
+
+.review_text >h3 >i{
+    color: rgb(250, 54, 54);
+}
+
+.review_pic > img{
+    width: 67%;
+    height: 67%;
+    border-radius: 50%;
+}
+
+.review_text >a{
+    text-decoration: underline;
+    color: rgba(36, 36, 158, 0.822);
+}
+
+.photo{
+    width: 88%;
+    height: 50px;
+    margin: auto;
+}
+
+.photo >a{
+    display: block;
+    text-decoration: underline;
+    text-align: center;
+}
+
+footer{
+    border: var(--border-type) var(--border-thick) brown;
+    height: 200px;
+    background: black;
+}
+
+.sns{
+    width: 100%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 43px;
+}
+
+.sns > a{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.sns > a > i{
+    font-size: 30px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.info{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+}
