@@ -1,6 +1,7 @@
 //커스텀어레이를 만듭니다
     var 데이터 = [
-        {lat:37.28274957269953, lng:127.01777215587882,place:'<div class="seeker" style="padding:5px">카페 초안</div>'},
+        {lat:37.28274957269953, lng:127.01777215587882,place:'<div class="seeker" style="padding:5px">카페 초안</div>',
+        shopName:'카페 맛집'},
         {lat:37.27999728059638, lng:127.01822191857855,place:'<div class="seeker" style="padding:5px">진미통닭</div>'},
         {lat:37.28804896891714, lng:127.01369200017918,place:'<div class="seeker" style="padding:5px">정지영커피로스터즈</div>'},
         {lat:37.28571686278892, lng:127.01395184236323,place:'<div class="seeker" style="padding:5px">존앤진</div>'},
@@ -26,10 +27,16 @@
 
             const storeDetail = document.querySelector(".storeDetail");
             var newMarkerPosition  = new kakao.maps.LatLng(데이터[arrayNumber].lat,데이터[arrayNumber].lng);
-    
+
             //클릭한 마커값과 인덱스값을 비교합니다
+            //또한 알맞은 가게 이름을 삽입합니다
             if(position.La === newMarkerPosition.La){
-                storeDetail.innerHTML ="<iframe class=\"sample\" style=\"width:100%; height: 98%;\"src=\"/pages/ex"+`${arrayNumber}`+".html\"></iframe>";
+                storeDetail.innerHTML ="<iframe class=\"sample\" style=\"width:100%; height: 98%;\"src=\"/pages/ex.html\"></iframe>";
+                const iframe = document.querySelector(".sample");
+                iframe.onload = function(){
+                const shopName = iframe.contentWindow.document.querySelector(".name .text1");
+                shopName.innerText = `${데이터[arrayNumber].shopName}`;
+            }
             } else{
                 storeDetail.innerHTML ="<iframe class=\"sample\" style=\"width:100%; height: 98%;\"src=\"/pages/sidbar.html\"></iframe>";
             }                
