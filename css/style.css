@@ -11,12 +11,17 @@ html,body{
 
 header{
     width: 100%;
+    text-align: center;
     border: var(--border-thick) var(--border-type) black;
 }
 
 nav{
     width: 100%;
     border: var(--border-thick) var(--border-type) green;
+}
+
+header > i{
+    font-size: 50px;
 }
 
 .container{
